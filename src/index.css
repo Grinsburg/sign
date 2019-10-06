@@ -1,13 +1,154 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.image-block {
+  background: url(img/img.png) center center / cover;
+}
+
+.popover-link,
+.popover-link:hover {
+  color: #ced4da;
+  cursor: pointer;
+}
+
+a:focus {
+  outline: none;
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: none;
+}
+
+.custom-select:focus {
+  box-shadow: none;
+}
+
+.custom-select {
+  border: 1px solid #ced4da;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  color: #6c757d;
+  background-color: #ffffff;
+  border-color: #6c757d;
+}
+
+.btn-secondary {
+  color: #6c757d;
+  background-color: #ffffff;
+  border-color: #ced4da!important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: #ffffff;
+  color: #6c757d;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* .btn-secondary:not(:disabled):not(.disabled):active:hover {
+  background-color: #ffffff;
+  color: #fff!;
+} */
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
+
+.btn-sign {
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 10px 0 10px 0;
+  background-color: #185DD2;
+}
+
+.fa-arrow-right {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.btn-lang {
+  border-radius: 50%;
+  color: #6c757d;
+  font-size: .75rem;
+  padding: .375rem .575rem;
+  border: 1px solid #ced4da;
+}
+
+.btn-lang:hover {
+  color: #6c757d;
+  background-color: #ced4da;
+}
+
+.btn-lang.active {
+  background-color: #185DD2;
+  color: #fff;
+  border: 1px solid #185DD2;
+}
+
+.btn-lang.active:hover {
+  background-color: #185DD2;
+  color: #fff;
+  border: 1px solid #185DD2;
+}
+
+.btn-lang:hover {
+  color: #ffffff;
+}
+
+h1,
+label,
+.btn-lang,
+.btn-sign {
+  font-weight: bold;
+}
+
+h1 {
+  position: relative;
+}
+
+.form-control,
+.custom-select,
+.btn-secondary {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: #185DD2;
+  width: 45px;
+  height: 7px;
+  top: 70px;
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lang-item {
+  justify-content: space-evenly;
 }
