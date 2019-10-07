@@ -1,13 +1,15 @@
 import React from 'react';
 import Sign from '../Sign/Sign'
 
+import {Container, Row} from 'react-bootstrap'
+
 function App() {
   return (
-            <section className="container">
-                <div className="d-flex align-items-center" style={{height: "100vh"}}>
-                    <Sign />
-                </div>
-            </section>
+          <Container>
+              <Row className="d-flex align-items-center" style={{height: "100vh"}}>
+                  <Sign />
+              </Row>
+          </Container>
   );
 }
 

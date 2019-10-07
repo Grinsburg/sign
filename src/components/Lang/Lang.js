@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
+import {Button, Col} from 'react-bootstrap'
 
 export default class Lang extends Component{
     render(){
         return(
-            <div class="col-2 d-flex align-items-center lang-item">
-                <button class="btn btn-lang active" type="button">En</button>
-                <button class="btn btn-lang" type="button">Ru</button>
-            </div>
+            <Col md={2} className="d-flex align-items-center lang-item">
+                <Button className="btn btn-lang" type="button">En</Button>
+                <Button className="btn btn-lang" type="button">Ru</Button>
+            </Col>
         )
     }
 }

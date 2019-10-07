@@ -3,15 +3,17 @@ import React, {Component} from 'react'
 import Image from '../Image/Image'
 import Form from '../Form/Form'
 
+import {Col} from 'react-bootstrap'
+
 export default class Sign extends Component{
     render(){
         return(
-            <div className="col-12">
+            <Col className="col-12">
                 <div className="row shadow">
                     <Image />
                     <Form />
                 </div>
-            </div>
+            </Col>
         )
     }
 }

@@ -1,93 +1,97 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+
+import { Form, Col, InputGroup, Dropdown, FormControl, DropdownButton, Button } from 'react-bootstrap'
+
 
 export default class Inputs extends Component{
     render(){
         return(
-            <div className="col-12 pt-5">
-                <form>
-                    <div className="form-row">
-                        <div class="form-group col-6">
-                            <label for="inputEmail4">Full Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Please enter your name" />
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="inputGroupSelect01">Position are you applying for</label>
-                            <a tabindex="0" class="popover-link rounded-circle" id="example" role="button" data-toggle="popover" data-trigger="focus" title="Please applying your" data-content="Please select your position"><i class="fas fa-question-circle" ></i></a>
-                            <div class="input-group">
-                                <select class="custom-select" id="inputGroupSelect01">
+            <div className="col-12 pt-5 pl-0 pr-0">
+                <Form>
+                    <Form.Row>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Full Name</Form.Label>
+                            <Form.Control type="text" placeholder="Please enter your name" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Position are you applying for</Form.Label>
+                            <a href="/" tabindex="0" class="popover-link rounded-circle pl-1" id="example" role="button" data-toggle="popover" data-trigger="focus" title="Please applying your" data-content="Please select your position"><i class="fas fa-question-circle" ></i></a>
+                            <Form.Control as="select">
                                     <option selected>Position are you applying for</option>
                                     <option value="1">Junior</option>
                                     <option value="2">Middle</option>
                                     <option value="3">Senior</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="dropdown">Phone number</label>
-                            <div class="input-group" id="dropdown">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Flag</button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">UK</a>
-                                        <a class="dropdown-item" href="#">BY</a>
-                                        <a class="dropdown-item" href="#">US</a>
-                                        <a class="dropdown-item" href="#">GE</a>
-                                    </div>
-                                </div>
-                                <input type="text" className="form-control" id="phone" aria-label="Text input with dropdown button" placeholder="(999) 999-9999" />
-                            </div>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="inputEmail4">Country</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Please enter your country" />
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="inputPassword4">City</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Please enter your city"/>
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="inputEmail4">Password</label>
-                            <input type="password" class="form-control" id="inputEmail4" placeholder="Password" />
-                        </div>
-                        <div class="form-group col-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password"/>
-                        </div>
-                    </div>
-                    <label for="gender">Gender</label>
-                    <div class="form-group col-12">
-                        <div class="form-row justify-content-center">
-                            <div class="col-12">
-                                <div class="row" id="group1">
-                                    <div class="form-check col-2">
-                                        <input class="form-check-input" id="maleGender" type="radio" id="gridCheck1" name="group1" />
-                                        <label class="form-check-label" for="maleGender"> Male</label>
-                                    </div>
-                                    <div class="form-check col-2">
-                                        <input class="form-check-input" id="femaleGender" type="radio" id="gridCheck2" name="group1" />
-                                        <label class="form-check-label" for="femaleGender">Female</label>
-                                    </div>
-                                    <div class="form-check col-2">
-                                        <input class="form-check-input" id="oterGender" type="radio" id="gridCheck3" name="group1" />
-                                        <label class="form-check-label" for="oterGender">Other</label>
-                                    </div>
-                                    <div class="form-check col-4">
-                                        <input class="form-check-input" id="notSayGender" type="radio" id="gridCheck4" name="group1" />
-                                        <label class="form-check-label" for="notSayGender">Prefer not to say</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-sign btn-block">Next Step <i class="fas fa-arrow-right"></i> </button>
-                    <div class="pt-3">
-                        <p>Already have an account? <a href="#">  Sign in</a></p>
-                    </div>
-                </form>
+                            </Form.Control>
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control type="email" placeholder="Email" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Phone number</Form.Label>
+                            <InputGroup >
+                                <DropdownButton
+                                as={InputGroup.Prepend}
+                                variant="secondary"
+                                title="Flag"
+                                id="input-group-dropdown-1"
+                                >
+                                <Dropdown.Item href="#">UK</Dropdown.Item>
+                                <Dropdown.Item href="#">BY</Dropdown.Item>
+                                <Dropdown.Item href="#">USA</Dropdown.Item>
+                                <Dropdown.Item href="#">GE</Dropdown.Item>
+                                </DropdownButton>
+                                <FormControl aria-describedby="basic-addon1" placeholder="(999) 999-9999" />
+                            </InputGroup>
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Country</Form.Label>
+                            <Form.Control type="text" placeholder="Please enter your country" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>City</Form.Label>
+                            <Form.Control type="text" placeholder="Please enter your city" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" placeholder="Please enter your password" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} md={6}>
+                            <Form.Label>Confirm password</Form.Label>
+                            <Form.Control type="text" placeholder="Please confirm password" />
+                        </Form.Group>
+
+                        <Form.Label>Gender</Form.Label>
+                        <Form.Group as={Col} md={12}>
+                            <Form.Row >
+                                <Form.Group as={Col} md={2} id="formGridCheckbox">
+                                    <Form.Check type="radio" label="Male" />
+                                </Form.Group>
+                                <Form.Group as={Col} md={2} id="formGridCheckbox">
+                                    <Form.Check type="radio" label="Female" />
+                                </Form.Group>
+                                <Form.Group as={Col} md={2} id="formGridCheckbox">
+                                    <Form.Check type="radio" label="Other" />
+                                </Form.Group>
+                                <Form.Group as={Col} md={4} id="formGridCheckbox">
+                                    <Form.Check type="radio" label="Prefer not to say" />
+                                </Form.Group>
+                            </Form.Row>
+                        </Form.Group>
+                        <Button as={Col} md={12} type="submit" className="btn btn-sign btn-block">Next Step <i class="fas fa-arrow-right"></i></Button>
+                        <Form.Text as={Col} md={12} class="pt-3">
+                            <p>Already have an account? <a href="/">  Sign in</a></p>
+                        </Form.Text>
+                    </Form.Row>
+                </Form>
             </div>
         )
     }
