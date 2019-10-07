@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 
+import {Col} from 'react-bootstrap'
 export default class Image extends Component{
     render(){
         return(
-            <div className="col-4 image-block"></div>
+            <Col md="5" className="image-block"></Col>
         )
     }
 }

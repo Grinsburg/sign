@@ -1,16 +1,17 @@
 import React, {Component} from 'react'
 
 import Lang from '../Lang/Lang'
+import Title from '../Title/Title'
+
+import {Row} from 'react-bootstrap'
 
 export default class Header extends Component {
     render(){
         return(
-            <div className="row justify-content-between pt-3">
-                <div className="col-5">
-                    <h1>Registration</h1>
-                </div>
+            <Row className="justify-content-between pt-3">
+                <Title />
                 <Lang />
-            </div>
+            </Row>
         )
     }
 }

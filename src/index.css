@@ -4,7 +4,8 @@ body {
 
 
 .image-block {
-    background: url(./img.png) center center / cover;
+    background: url(./img.png);
+    background-size: cover;
 }
 
 .popover-link,

@@ -2,17 +2,19 @@ import React, {Component} from 'react'
 import Header from '../Header/Header'
 import Inputs from '../Inputs/Inputs'
 
+import {Col} from 'react-bootstrap'
+
 export default class Form extends Component{
     render(){
         return(
-            <div className="col-8">
+            <Col md="7">
                 <div className="reg-block d-flex justify-content-center">
-                    <div className="col-11 pt-4 pb-4">
+                    <Col md="12" className="pt-4 pb-4">
                         <Header/>
                         <Inputs/>
-                    </div>
+                    </Col>
                 </div>
-            </div>
+            </Col>
         )
     }
 }
